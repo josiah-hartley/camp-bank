@@ -1,0 +1,79 @@
+.navbar {
+  background-color: rgba(51, 103, 214, 1);
+  padding: 20px;
+  
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  color: #fff;
+  text-align: center;
+
+  .brand-link {
+
+    > span {
+      cursor: pointer;
+      user-select: none;
+      font-size: 1.5em;
+      padding: 10px;
+
+      &:hover {
+        background-color: rgba(255,255,255,0.2);
+      }
+    }
+  }
+
+  .back-button, .menu-btn-holder {
+    float: left;
+    cursor: pointer;
+    user-select: none;
+    padding: 7px 3px 6px 3px;
+    border-radius: 50%;
+
+    &:hover {
+      background-color: rgba(255,255,255,0.2);
+    }
+  }
+
+  .back-button {
+    float: left;
+  }
+  
+  .menu-btn-holder {
+    float: right;
+  }
+}
+
+.transparent-screen {
+  position: fixed;
+  z-index: 100;
+  width: 100%;
+  height: calc(100vh - 70px);
+  left: 0%;
+  top: 70px;
+  background-color: rgba(0,0,0,0);
+}
+
+.overflow-menu {
+  position: fixed;
+  top: 75px;
+  right: 20px;
+  z-index: 101;
+  background-color: #fff;
+  border: 1px solid rgba(0,0,0,0.2);
+  border-radius: 5px;
+  padding: 10px 0px;
+
+  @include high-elevation-box-shadow();
+
+  span {
+    display: block;
+    padding: 10px 50px 10px 25px;
+    cursor: pointer;
+    user-select: none;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+
+    &:hover {
+      background-color: rgba(0,0,0,0.07);
+    }
+  }
+}

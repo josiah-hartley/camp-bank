@@ -1,0 +1,132 @@
+.center-panel {
+  text-align: center;
+  position: relative;
+
+  @include desktop-up {
+    width: 60%;
+    left: 20%;
+  }
+}
+
+.new-bank-button {
+  cursor: pointer;
+  user-select: none;
+  position: relative;
+  width: 70%;
+  left: 15%;
+  margin-top: 50px;
+  padding: 20px 0px;
+  border: 1px solid rgba(0,0,0,0.1);
+  border-radius: 5px;
+  @include low-elevation-box-shadow();
+
+  &:hover {
+    background-color: rgba(0,0,0,0.05);
+  }
+}
+
+.new-bank-form {
+  position: relative;
+  width: 70%;
+  left: 15%;
+  border-bottom: 2px solid rgba(0,0,0,0.1);
+  padding-bottom: 30px;
+  text-align: left;
+
+  @include tablet-or-desktop {
+    padding-left: 30px;
+  }
+  @include large-desktop {
+    padding-left: 50px;
+  }
+
+  h3 {
+    font-weight: 400;
+    margin-top: 40px;
+  }
+}
+
+.banker-selection {
+  padding-left: 30px;
+  padding-bottom: 40px;
+
+  input[type=checkbox] {
+    margin-right: 20px;
+  }
+
+  div {
+    margin-top: 15px;
+  }
+}
+
+.button-group {
+  text-align: right;
+}
+
+.bank-link-holder {
+  display: inline-block;
+  margin: 50px;
+}
+
+.bank-link {
+  position: relative;
+  height: 250px;
+  width: 250px;
+  cursor: pointer;
+  user-select: none;
+  background-color: rgba(0,0,0,0.02);
+  text-align: center;
+
+  div {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+  }
+
+  &::after {
+    content: "";
+    background: url('assets/img/creditcard.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    opacity: 0.1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    z-index: -1;
+  }
+
+  &:hover {
+    background-color: rgba(0,0,0,0.05);
+    &::after {
+      opacity: 0.3;
+    }
+  }
+
+  h2 {
+    font-weight: 400;
+  }
+}
+
+.new-user-form {
+  text-align: left;
+
+  h2 {
+    font-weight: 400;
+  }
+
+  table {
+    th {
+      font-weight: 400;
+    }
+    th, td {
+      padding: 10px 20px;
+    }
+    td:nth-child(2) {
+      text-align: center;
+    }
+  }
+}

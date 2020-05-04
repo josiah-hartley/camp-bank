@@ -1,0 +1,5 @@
+# To Do
+
+[X] * Users page: create, edit permissions
+[X] * CRUD actions for users + CSV import
+[ ] * Reports

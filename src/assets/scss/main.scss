@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+@import 'defs';
+@import 'nav';
+@import 'login';
+@import 'home';
+@import 'bank';
+@import 'reports';
+@import 'shared';
+//@import 'imported';
+
+body, html {
+    margin: 0px;
+    //font-family: Helvetica, Arial, sans-serif;
+    font-family: 'Roboto', Arial, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}

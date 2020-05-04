@@ -1,0 +1,243 @@
+@import 'defs';
+
+// from App.vue
+#nav {
+  //padding: 30px;
+
+  a {
+    font-weight: bold;
+    color: #2c3e50;
+
+    &.router-link-exact-active {
+      color: #42b983;
+    }
+  }
+}
+
+// from Bank.vue
+.search-box {
+  text-align: center;
+  padding: 30px 30px 0px 30px;
+
+  .search-outline {
+      @include below-desktop {
+          width: 100%;
+      }
+
+      @include desktop-up {
+          width: 60%;
+          margin: auto;
+      }
+
+      border: 1px solid rgba(0,0,0,0.2);
+      //border-radius: 20px;
+
+      &:hover {
+          border: 1px solid rgba(0,0,0,0.4);
+      }
+  }
+
+  .search-input-wrapper {
+      
+
+      display: flex;
+      text-align: left;
+      padding: 10px 14px;
+
+      .nav-icon {
+          padding-top: 12px;
+          margin-right: 10px;
+          color: rgba(0,0,0,0.4);
+      }
+  }
+
+  input {
+      //width: 100%;
+      font-size: 1.2em;
+      flex-grow: 1;
+      padding: 12px 6px;
+      border: 1px solid rgba(0,0,0,0.2);
+      //border: 1px solid rgba(53, 75, 172, 0.4);
+      //border-radius: 50px;
+  }
+}
+
+#focused {
+  background-color: rgba(0,0,0,0.05);
+  //font-weight: 600;
+}
+
+#search-results {
+  max-height: 70vh;
+  overflow-y: auto;
+}
+
+.details-table {
+  border-collapse: collapse;
+
+  th, td {
+      text-align: center;
+      border: 1px solid rgba(0,0,0,0.15);
+      padding: 3px;
+  }
+}
+
+// from CamperDetail.vue
+/*.camper-details {
+  width: 100%;
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+  padding: 15px;
+  color: rgba(0,0,0,0.7);
+  cursor: pointer;
+  user-select: none;
+
+  &:hover {
+      background-color: rgba(0,0,0,0.02);
+  }
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  .cabin-number {
+      background-color: rgba(100,181,246 ,0.3);
+      border: 1px solid rgba(25,118,210 ,1);
+      border-radius: 50%;
+      padding: 8px 12px;
+  }
+
+  .person {
+      min-width: 60%;
+      max-width: 70%;
+      text-align: center;
+  }
+
+  .name {
+      font-size: 1.1em;
+      margin: 0px 5px 0px 15px;
+  }
+
+  .age {
+      font-size: 0.8em;
+      color: rgba(0,0,0,0.5);
+  }
+
+  .balance {
+      display: flex;
+      flex-direction: column;
+  }
+
+  .current-balance {
+      font-size: 1.2em;
+      margin: 0px 15px;
+  }
+
+  .positive-balance {
+      color: rgba(27,94,32 ,1);
+  }
+
+  .negative-balance {
+      color: rgba(198,40,40 ,1);
+  }
+
+  .negative-balance::before {
+      content: '-';
+  }
+
+  .initial-balance {
+      font-size: 0.8em;
+      color: rgba(0,0,0,0.5);
+      margin: auto;
+  }
+}*/
+
+// from ImportAccountData.vue
+/*.import-sample {
+  border-collapse: collapse;
+
+  th, td {
+    text-align: center;
+    border: 1px solid rgba(0,0,0,0.15);
+    padding: 3px;
+  }
+}
+
+.inputfile {
+    width: 0.1px;
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
+}
+
+.inputfile + label {
+  margin: 20px;
+  padding: 25px;
+  font-size: 1.25em;
+  font-weight: 700;
+  color: rgba(0,0,0,0.7);
+  background-color: rgba(0,0,0,0.02);
+  border: 1px solid rgba(0,0,0,0.4);
+  border-radius: 5px;
+  display: inline-block;
+  cursor: pointer;
+  user-select: none;
+}
+
+.inputfile:focus + label {
+	outline: 1px dotted #000;
+	outline: -webkit-focus-ring-color auto 5px;
+}
+
+.inputfile:focus + label,
+.inputfile + label:hover {
+  background-color: rgba(0,0,0,0.04);
+}
+
+#out-table {
+
+  table {
+    margin: auto;
+    border-collapse: collapse;
+
+    th, td {
+      text-align: center;
+      border: 1px solid rgba(0,0,0,0.15);
+      padding: 3px;
+    }
+  }
+}*/
+
+/*.modal {
+  position: fixed;
+  width: 80%;
+  height: 80%;
+  left: 10%;
+  top: 10%;
+  z-index: 99;
+  background-color: white;
+  overflow: auto;
+}*/
+
+// from TransactionModal.vue
+/*.grayed-out {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  top: 0%;
+  left: 0%;
+  z-index: 10;
+  background-color: rgba(0,0,0,0.1);
+}*/
+
+/*.modal {
+  position: fixed;
+  width: 80%;
+  height: 80%;
+  top: 10%;
+  left: 10%;
+  border: 1px solid rgba(0,0,0,0.7);
+  background-color: #fff;
+  z-index: 99;
+}*/

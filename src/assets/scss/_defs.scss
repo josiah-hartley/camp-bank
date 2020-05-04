@@ -1,0 +1,110 @@
+$tablet-width: 768px;
+$desktop-width: 1024px;
+$large-desktop-width: 1350px;
+
+$primary-color: rgba(0, 10, 53, 1);
+$darker-primary-color: rgba(0, 9, 43, 1);
+$secondary-color: rgba(255, 255, 250, 0.8);
+
+@mixin phone {
+    @media (max-width: #{$tablet-width - 1px}) {
+        @content;
+    }
+}
+
+@mixin not-phone {
+    @media (min-width: #{$tablet-width}) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width: #{$desktop-width}) and (max-width: #{$large-desktop-width - 1px}) {
+        @content;
+    }
+}
+
+@mixin tablet-or-desktop {
+    @media (min-width: #{$tablet-width}) and (max-width: #{$large-desktop-width - 1px}) {
+        @content;
+    }
+}
+
+@mixin large-desktop {
+    @media (min-width: #{$large-desktop-width}) {
+        @content;
+    }
+}
+
+@mixin desktop-up {
+    @media (min-width: #{$desktop-width}) {
+        @content;
+    }
+}
+
+@mixin below-desktop {
+    @media (max-width: #{$desktop-width - 1px}) {
+        @content;
+    }
+}
+
+@mixin box-shadow($h, $v, $blur, $spread, $color) {
+    -webkit-box-shadow: $h $v $blur $spread $color;
+    -moz-box-shadow: $h $v $blur $spread $color;
+    box-shadow: $h $v $blur $spread $color;
+}
+
+@mixin high-elevation-box-shadow() {
+  @include box-shadow(0px, 2px, 3px, 4px, rgba(0,0,0,0.07));
+}
+
+@mixin low-elevation-box-shadow() {
+  @include box-shadow(0px, 1px, 2px, 3px, rgba(0,0,0,0.03));
+}
+
+@mixin inset-box-shadow($h, $v, $blur, $spread, $color) {
+    -webkit-box-shadow: inset $h $v $blur $spread $color;
+    -moz-box-shadow: inset $h $v $blur $spread $color;
+    box-shadow: inset $h $v $blur $spread $color;
+}
+
+@mixin gradient-left-to-right($left, $middle, $right) {
+    background: $left;
+    background: linear-gradient(90deg, $left 0%, $middle 50%, $right 100%);
+}
+
+@mixin gradient-top-to-bottom($top, $middle, $bottom) {
+    background: $top;
+    background: linear-gradient(180deg, $top 0%, $middle 50%, $bottom 100%);
+}
+
+@mixin gradient-tb($startcolor, $endcolor) {
+    background: $startcolor;
+    background: -moz-linear-gradient(top, $startcolor 0%, $endcolor 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, $startcolor), color-stop(100%, $endcolor));
+    background: -webkit-linear-gradient(top, $startcolor 0%, $endcolor 100%);
+    background: -o-linear-gradient(top, $startcolor 0%, $endcolor 100%);
+    background: -ms-linear-gradient(top, $startcolor 0%, $endcolor 100%);
+    background: linear-gradient(to bottom, $startcolor 0%, $endcolor 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#{$startcolor}', endColorstr='#{$endcolor}', GradientType=0 );
+}
+
+@mixin hide-number-input-arrows() {
+  /* Chrome, Safari, Edge, Opera */
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  /* Firefox */
+  input[type=number] {
+    -moz-appearance: textfield;
+  }
+}
